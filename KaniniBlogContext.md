@@ -4,7 +4,7 @@
 A premium personal literary blog built with **React + Vite**, designed with an "Elden Ring" inspired aesthetic — deep teal/swamp green backgrounds, golden "Grace" accents, and ancient typography. Features real book reviews, poems, and essays.
 
 **Local Dev:** `npm run dev` → http://localhost:5173  
-**Project Path:** `c:\Users\Kanishka\Desktop\Full stack Ass\`
+**Project Path:** `c:\Users\Kanishka\Desktop\personal-blog\`
 
 ---
 
@@ -22,7 +22,7 @@ A premium personal literary blog built with **React + Vite**, designed with an "
 
 ## Project Structure
 ```
-Full stack Ass/
+personal-blog/
 ├── index.html                  # Entry HTML (Fonts: Cinzel, Cormorant Garamond, Inter)
 ├── package.json
 ├── vite.config.js
