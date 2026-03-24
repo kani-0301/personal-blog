@@ -1,0 +1,162 @@
+.post-card {
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--border-subtle);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, var(--accent-glow), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.post-card:hover::before {
+    opacity: 1;
+}
+
+.post-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow:
+        var(--shadow),
+        0 0 30px var(--accent-glow),
+        inset 0 1px 0 rgba(242, 209, 108, 0.2);
+}
+
+.post-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.category-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid;
+}
+
+.category-badge.book {
+    background: linear-gradient(135deg, rgba(176, 121, 67, 0.3), rgba(242, 209, 108, 0.2));
+    border-color: var(--border);
+    color: var(--accent);
+}
+
+.category-badge.poem {
+    background: linear-gradient(135deg, rgba(70, 103, 71, 0.3), rgba(103, 115, 86, 0.2));
+    border-color: #677356;
+    color: #BDBE8E;
+}
+
+.category-badge.essay {
+    background: linear-gradient(135deg, rgba(48, 65, 61, 0.5), rgba(26, 35, 37, 0.3));
+    border-color: var(--border-subtle);
+    color: var(--text-secondary);
+}
+
+.post-date {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.post-card:hover .post-title {
+    color: var(--accent);
+    text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.rating {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.rating svg {
+    width: 18px;
+    height: 18px;
+}
+
+.star-filled {
+    color: var(--accent);
+    fill: var(--accent);
+    filter: drop-shadow(0 0 3px var(--accent-glow));
+}
+
+.star-empty {
+    color: var(--border-subtle);
+}
+
+.post-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.read-more {
+    font-family: var(--font-ui);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.read-more::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.read-more:hover::after {
+    transform: translateX(6px);
+}

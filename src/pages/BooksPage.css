@@ -1,0 +1,102 @@
+.books-page {
+    padding: 3rem 0 5rem;
+    animation: fogReveal 1s ease-out;
+}
+
+/* ── Header ── */
+.library-label {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent-glow);
+    margin-bottom: 1rem;
+    text-align: center;
+    animation: graceGlow 4s ease-in-out infinite;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.page-header h1 {
+    margin-bottom: 1.25rem;
+}
+
+.page-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+/* ── Reading Stats ── */
+.reading-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1.75rem 2.5rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent-glow);
+    letter-spacing: 0.05em;
+}
+
+.stat-label {
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.stat-divider {
+    color: var(--border);
+    font-size: 1rem;
+}
+
+/* ── Books List ── */
+.books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .books-page {
+        padding: 2rem 0 3rem;
+    }
+
+    .reading-stats {
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .stat-number {
+        font-size: 1rem;
+    }
+}

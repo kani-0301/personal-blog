@@ -1,0 +1,123 @@
+.poems-page {
+    padding: 3rem 0;
+    animation: fogReveal 1.2s ease-out;
+}
+
+.poems-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.poem {
+    margin-bottom: 4rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    position: relative;
+}
+
+.poem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top,
+            var(--accent-glow),
+            transparent 70%);
+    opacity: 0.2;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.poem-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--accent-glow);
+    position: relative;
+    z-index: 1;
+}
+
+.poem-date {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1;
+}
+
+.poem-content {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.poem-divider {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin: 5rem 0;
+    position: relative;
+    text-shadow: 0 0 20px var(--accent-glow);
+    animation: graceGlow 4s ease-in-out infinite;
+}
+
+.poem-divider::before,
+.poem-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent,
+            var(--border),
+            transparent);
+}
+
+.poem-divider::before {
+    right: 60%;
+}
+
+.poem-divider::after {
+    left: 60%;
+}
+
+@media (max-width: 768px) {
+    .poems-page {
+        padding: 2rem 0;
+    }
+
+    .poem {
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .poem-title {
+        font-size: 1.75rem;
+    }
+
+    .poem-content {
+        font-size: 1.05rem;
+        line-height: 1.9;
+    }
+
+    .poem-divider {
+        margin: 3.5rem 0;
+    }
+}
